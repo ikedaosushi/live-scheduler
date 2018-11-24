@@ -30,7 +30,7 @@ jobs:
           name: install dependencies
           command: |
             cd backend
-            pip3 install pipenv 
+            sudo pip3 install pipenv 
             pipenv install 
             # python3 -m venv venv
             # . venv/bin/activate
