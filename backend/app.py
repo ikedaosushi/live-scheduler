@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 def index():
     res = {
         'status_code': 200,
-        'text': 'This is live scheduler'
+        'text': "welcome live scheduler" 
     }
 
     return jsonify(res)
