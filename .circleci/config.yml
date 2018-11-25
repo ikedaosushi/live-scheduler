@@ -51,6 +51,10 @@ jobs:
       #     path: test-reports
       #     destination: test-reports
   deploy:
+    docker:
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:3.6.1
     steps:
       - checkout
       - run:
@@ -58,3 +62,8 @@ jobs:
           command: |
             cd backend
             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+# deployment:
+#   staging:
+#     branch: master
+#     heroku:
+#       appname: foo-bar-123
